@@ -44,26 +44,26 @@
 
     // Configuración por sala
     const rooms = {
-      "Sala1": [
-        "sala1-1.jpg",
-        "sala1-2.jpg",
-        "sala1-3.jpg"
+      "SkyAvenue": [
+        "SkyAvenue-1.jpg",
+        "SkyAvenue-2.jpg",
+        "SkyAvenue-3.jpg"
       ],
-      "Sala2": [
-        "sala2-1.jpg",
-        "sala2-2.jpg",
-        "sala2-3.jpg"
+      "HighPoint": [
+        "HighPoint-1.jpg",
+        "HighPoint-2.jpg",
+        "HighPoint-3.jpg"
       ]
     };
 
-    // Room por defecto
-    const roomDefault = "Sala1";
+    // Default Room
+    const roomDefault = "SkyAvenue";
 
     const imagenes = rooms[roomSeleccionada] || rooms[roomDefault];
 
     const slideshow = document.getElementById("slideshow");
 
-    // Crear imágenes
+    // create images
     imagenes.forEach((src, index) => {
       const img = document.createElement("img");
       img.src = src;
@@ -75,7 +75,7 @@
     const slides = document.querySelectorAll(".slide");
     let current = 0;
 
-    // Si solo hay una imagen, no rota
+    // If there is only one imagen it does not create slide show
     if (slides.length > 1) {
       setInterval(() => {
         slides[current].classList.remove("active");
