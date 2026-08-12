@@ -1,2 +1,6 @@
 /*
   Content-Security-Policy: frame-ancestors https://teams.microsoft.com/;
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  X-Robots-Tag: noindex, nofollow
